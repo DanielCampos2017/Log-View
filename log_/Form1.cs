@@ -39,7 +39,7 @@ namespace log_
             if (resultado != "")
             {
                 resultado = resultado.TrimStart();
-                if (resultado != "ss")
+                if (resultado != "senha")
                 {
                     MessageBox.Show("Senha Incorreta !");
                 }
