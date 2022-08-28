@@ -66,7 +66,7 @@ namespace log_
           
 
 
-        #region Função de Eventos - arquivos escluidos
+        #region Função de Eventos
         
         private void btnListar_Click(object sender, EventArgs e)
         {
@@ -74,10 +74,6 @@ namespace log_
             ThreadExecultar = new Thread(Lista_Filtro);
             ThreadExecultar.Start();               
         }
-
-
-     
-
 
         void Lista_Filtro()
         {
@@ -223,10 +219,6 @@ namespace log_
                 MessageBox.Show("Erro: Lista_Filtro() \n\r" + e.Message);
             }
         }
-
-
-    
-
 
         //# Filtra os Log por Dada
         bool DataLogs(string DadaInicio, string DataFim, string DataLog)
