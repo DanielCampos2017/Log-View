@@ -90,17 +90,12 @@ namespace log_
                 string NomePC = Environment.MachineName;
 
                 EventLog Eventos;
-
                 Eventos = new EventLog();
                
-
                 Eventos = (EventLog)EventLog.GetEventLogs().First(o => o.Log == "Security");
-
 
                 Eventos.MaximumKilobytes = 2048;
                 List<EventLogEntry> lista = Eventos.Entries.Cast<EventLogEntry>().ToList();
-
-             
 
                 // var listaOrdernadaInverso = lista.OrderByDescending(d => d.EventID); // orderna pelo eventID
                 var listaOrdernadaInverso = lista.OrderByDescending(d => d.Index); // ordena pelo index
@@ -108,8 +103,6 @@ namespace log_
                 //Lista.Whete(d => codigo == 4656)
                // var listaOrdernadaInverso2 = lista.Where(d => d.EventID == 4656);
                 var listaOrdernadaInverso2 = lista.Where(d => d.EventID == 4656);
-
-
 
                 EventosTotal = Eventos.Entries.Count;
 
@@ -178,7 +171,7 @@ namespace log_
 
                         #endregion
 
-                        #region Eventos Null
+                        #region Eventos Full
 
                         if (radioButtonNull.Checked == true)
                         {
