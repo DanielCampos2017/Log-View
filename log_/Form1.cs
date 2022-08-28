@@ -250,14 +250,14 @@ namespace log_
         }
 
 
-        // # adiciona no listView1
+        // # adiciona no listView
         void AddList(ClassPacote_Log dados)
         {
             ListViewItem item = new ListViewItem(new[] {dados.data, dados.Usuario, dados.Arquivo ,dados.Mensagem });
             listView1.Items.Add(item);
         }
 
-        // # Class
+        // # Class pacote Log
         public class ClassPacote_Log 
         {
            public string data;
